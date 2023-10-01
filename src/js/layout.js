@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import {Addcontacts } from "./views/addcontacts";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
@@ -19,16 +19,16 @@ const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
-				<ScrollToTop>
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="ac" element={<Addcontacts />} />
 					</Routes>
 					<Footer />
-				</ScrollToTop>
+		
 			</BrowserRouter>
 		</div>
 	);
